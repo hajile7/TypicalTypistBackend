@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "5WbYKWnJ6HkB/7DOa4neDNlAANt1UIMkv2AFd0K4ZuGYM1UY/sDO7iGTObNZ++vzvD+5QxVD3fVq/Za/NQPY8Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\elire\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\TyperV1API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\elire\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\elire\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\elire\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\elire\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\elire\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\elire\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
