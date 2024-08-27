@@ -160,6 +160,33 @@ namespace TyperV1API.Controllers
 
         }
 
+        [HttpDelete("{id}")]
+        public IActionResult removeUser(int id)
+        {
+            User result = dbContext.Users.Find(id);
+
+            if (result == null || result.Active == false)
+            {
+                return NotFound("User Not Found");
+            }
+
+            result.Active = false;
+
+            if(result.Image != null)
+            {
+                System.IO.File.Delete(Path.Combine(Directory.GetCurrentDirectory(), result.Image.ImagePath));
+            }
+
+            result.ImageId = null;
+            result.Image = null;
+
+            dbContext.Users.Update(result);
+            dbContext.SaveChanges();
+
+            return NoContent();
+
+        }
+
 
         
         
