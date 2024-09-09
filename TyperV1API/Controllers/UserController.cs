@@ -102,7 +102,7 @@ namespace TyperV1API.Controllers
             else
             {
                 newUser.ImageId = 101;
-                newUser.Image = null;
+                newUser.Image = dbContext.Images.Find(newUser.ImageId);
             }
 
             dbContext.Users.Add(newUser);
@@ -143,7 +143,7 @@ namespace TyperV1API.Controllers
                 Image newImage = uploader.getImage(u.Image, "Users");
                 if (newImage != null)
                 {
-                    if (updateUser.Image != null && System.IO.File.Exists(Path.Combine(Directory.GetCurrentDirectory(), updateUser.Image.ImagePath)) && updateUser.Image.ImagePath != "Images\\Users\\defaultProfilePic.png")
+                    if (updateUser.Image != null && System.IO.File.Exists(Path.Combine(Directory.GetCurrentDirectory(), updateUser.Image.ImagePath)) && updateUser.Image.ImagePath != "DefaultProfPic\\V1DefaultProfPic.webp")
                     {
                         System.IO.File.Delete(Path.Combine(Directory.GetCurrentDirectory(), updateUser.Image.ImagePath));
                         dbContext.Images.Remove(updateUser.Image);
@@ -177,8 +177,8 @@ namespace TyperV1API.Controllers
                 System.IO.File.Delete(Path.Combine(Directory.GetCurrentDirectory(), result.Image.ImagePath));
             }
 
-            result.ImageId = null;
-            result.Image = null;
+            result.ImageId = 101;
+            result.Image = dbContext.Images.Find(result.ImageId);
 
             dbContext.Users.Update(result);
             dbContext.SaveChanges();

@@ -6,7 +6,7 @@
 
         public Image getImage(IFormFile file, string folderName)
         {
-            string[] validExtensions = [".jpg", ".png", ".jpeg", ".gif", ".webp", ".avif", ".svg", ".jfif"];
+            string[] validExtensions = [".jpg", ".png", ".jpeg", ".gif", ".webp", ".avif", ".svg", ".jfif", ".webp"];
             string fileExtension = Path.GetExtension(file.FileName);
 
             if(!validExtensions.Contains(fileExtension))
