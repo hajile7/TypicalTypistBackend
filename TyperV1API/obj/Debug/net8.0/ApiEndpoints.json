@@ -133,5 +133,15 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TyperV1API.Controllers.WordsController",
+    "Method": "getRandomWords",
+    "RelativePath": "api/Words/Random",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]
