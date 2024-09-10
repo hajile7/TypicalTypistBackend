@@ -23,6 +23,7 @@ namespace TyperV1API.Controllers
                 FirstName = u.FirstName,
                 LastName = u.LastName,
                 UserName = u.UserName,
+                Email = u.Email,
                 Image = convertImageDTO(u.Image),
             };
         }
@@ -88,6 +89,7 @@ namespace TyperV1API.Controllers
             newUser.Password = u.Password;
             newUser.FirstName = u.FirstName;
             newUser.LastName = u.LastName;
+            newUser.Email = u.Email;
             newUser.Active = true; //do I need this?
 
             if (u.Image != null)
@@ -137,6 +139,13 @@ namespace TyperV1API.Controllers
                 }
                 updateUser.UserName = u.UserName;
 
+            }
+            if (u.Email != null) {
+                if (dbContext.Users.Any(o => o.Email == u.Email && u.Email != updateUser.Email && o.Active == true)) 
+                { 
+                    return BadRequest(); 
+                }
+                updateUser.Email = u.Email;
             }
             if (u.Image != null)
             {

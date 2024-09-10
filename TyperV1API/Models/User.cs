@@ -15,11 +15,17 @@ public partial class User
 
     public string Password { get; set; } = null!;
 
-    public int? ImageId { get; set; }
+    public string Email { get; set; } = null!;
 
-    public int? Wpm { get; set; }
+    public int? ImageId { get; set; }
 
     public bool? Active { get; set; }
 
     public virtual Image? Image { get; set; }
+
+    public virtual ICollection<UserBigraphStat> UserBigraphStats { get; set; } = new List<UserBigraphStat>();
+
+    public virtual ICollection<UserKeyStat> UserKeyStats { get; set; } = new List<UserKeyStat>();
+
+    public virtual ICollection<UserStat> UserStats { get; set; } = new List<UserStat>();
 }

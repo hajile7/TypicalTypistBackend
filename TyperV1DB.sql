@@ -1664,3 +1664,4 @@ VALUES ('minimize', LEN('minimize'), LEFT('minimize', 1)),
 ('most', LEN('most'), LEFT('most', 1)),
 ('us', LEN('us'), LEFT('us', 1));
 
+SELECT * FROM Words;
