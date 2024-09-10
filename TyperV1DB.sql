@@ -1669,3 +1669,5 @@ ALTER TABLE UserStats ADD CONSTRAINT userstats_bigraphid_fk FOREIGN KEY (Bigraph
 SELECT * FROM Bigraphs;
 
 SELECT * FROM UserStats;
+
+SELECT * FROM Users;

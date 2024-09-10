@@ -273,3 +273,4 @@ C:\Users\Eli\source\repos\My stuff\typerV1\TyperV1Backend\TyperV1API\TyperV1API\
 C:\Users\Eli\source\repos\My stuff\typerV1\TyperV1Backend\TyperV1API\TyperV1API\obj\Debug\net8.0\TyperV1API.pdb
 C:\Users\Eli\source\repos\My stuff\typerV1\TyperV1Backend\TyperV1API\TyperV1API\obj\Debug\net8.0\TyperV1API.genruntimeconfig.cache
 C:\Users\Eli\source\repos\My stuff\typerV1\TyperV1Backend\TyperV1API\TyperV1API\obj\Debug\net8.0\ref\TyperV1API.dll
+C:\Users\Eli\source\repos\My stuff\typerV1\TyperV1Backend\TyperV1API\TyperV1API\bin\Debug\net8.0\BCrypt.Net-Next.dll

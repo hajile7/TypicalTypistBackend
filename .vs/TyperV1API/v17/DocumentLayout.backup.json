@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|c:\\users\\eli\\source\\repos\\my stuff\\typerv1\\typerv1backend\\typerv1api\\typerv1api\\controllers\\wordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|solutionrelative:typerv1api\\controllers\\wordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|c:\\users\\eli\\source\\repos\\my stuff\\typerv1\\typerv1backend\\typerv1api\\typerv1api\\models\\secret.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|solutionrelative:typerv1api\\models\\secret.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|c:\\users\\eli\\source\\repos\\my stuff\\typerv1\\typerv1backend\\typerv1api\\typerv1api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|solutionrelative:typerv1api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|c:\\users\\eli\\source\\repos\\my stuff\\typerv1\\typerv1backend\\typerv1api\\typerv1api\\models\\word.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|solutionrelative:typerv1api\\models\\word.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|c:\\users\\eli\\source\\repos\\my stuff\\typerv1\\typerv1backend\\typerv1api\\typerv1api\\classes\\passwordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|solutionrelative:typerv1api\\classes\\passwordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|c:\\users\\eli\\source\\repos\\my stuff\\typerv1\\typerv1backend\\typerv1api\\typerv1api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|solutionrelative:typerv1api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|c:\\users\\eli\\source\\repos\\my stuff\\typerv1\\typerv1backend\\typerv1api\\typerv1api\\controllers\\wordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|solutionrelative:typerv1api\\controllers\\wordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|c:\\users\\eli\\source\\repos\\my stuff\\typerv1\\typerv1backend\\typerv1api\\typerv1api\\models\\word.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|solutionrelative:typerv1api\\models\\word.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 216,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,40 +35,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Secret.cs",
-              "DocumentMoniker": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Models\\Secret.cs",
-              "RelativeDocumentMoniker": "TyperV1API\\Models\\Secret.cs",
-              "ToolTip": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Models\\Secret.cs",
-              "RelativeToolTip": "TyperV1API\\Models\\Secret.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAxAAAAAAAAAA==",
+              "Title": "PasswordService.cs",
+              "DocumentMoniker": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Classes\\PasswordService.cs",
+              "RelativeDocumentMoniker": "TyperV1API\\Classes\\PasswordService.cs",
+              "ToolTip": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Classes\\PasswordService.cs",
+              "RelativeToolTip": "TyperV1API\\Classes\\PasswordService.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAA2wAwAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T17:07:45.814Z",
+              "WhenOpened": "2024-09-10T19:45:27.645Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "WordsController.cs",
               "DocumentMoniker": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Controllers\\WordsController.cs",
               "RelativeDocumentMoniker": "TyperV1API\\Controllers\\WordsController.cs",
               "ToolTip": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Controllers\\WordsController.cs",
               "RelativeToolTip": "TyperV1API\\Controllers\\WordsController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA1wA8AAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAxwBEAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-10T16:38:17.409Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Models\\User.cs",
-              "RelativeDocumentMoniker": "TyperV1API\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Models\\User.cs",
-              "RelativeToolTip": "TyperV1API\\Models\\User.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAgwB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T03:16:03.502Z",
               "EditorCaption": ""
             }
           ]
@@ -83,13 +66,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "TyperV1API\\Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Controllers\\UserController.cs",
               "RelativeToolTip": "TyperV1API\\Controllers\\UserController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAowDIAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAK0AAAAAAAAAAAAQwJsAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-08T14:36:22.222Z",
               "EditorCaption": ""
@@ -104,8 +87,7 @@
               "RelativeToolTip": "TyperV1API\\Models\\Word.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T16:43:00.863Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-10T16:43:00.863Z"
             }
           ]
         }

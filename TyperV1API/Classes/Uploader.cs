@@ -1,4 +1,6 @@
-﻿namespace TyperV1API.Models
+﻿using TyperV1API.Models;
+
+namespace TyperV1API.Classes
 {
     public class Uploader
     {
@@ -9,14 +11,14 @@
             string[] validExtensions = [".jpg", ".png", ".jpeg", ".gif", ".webp", ".avif", ".svg", ".jfif", ".webp"];
             string fileExtension = Path.GetExtension(file.FileName);
 
-            if(!validExtensions.Contains(fileExtension))
+            if (!validExtensions.Contains(fileExtension))
             {
                 return null;
             }
 
             long size = file.Length;
 
-            if(size > (1024 * 1024 * 5))
+            if (size > 1024 * 1024 * 5)
             {
                 return null;
             }
