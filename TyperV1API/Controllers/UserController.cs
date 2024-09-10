@@ -152,7 +152,7 @@ namespace TyperV1API.Controllers
                 Image newImage = uploader.getImage(u.Image, "Users");
                 if (newImage != null)
                 {
-                    if (updateUser.Image != null && System.IO.File.Exists(Path.Combine(Directory.GetCurrentDirectory(), updateUser.Image.ImagePath)) && updateUser.Image.ImagePath != "DefaultProfPic\\V1DefaultProfPic.webp")
+                    if (updateUser.Image != null && System.IO.File.Exists(Path.Combine(Directory.GetCurrentDirectory(), updateUser.Image.ImagePath)) && updateUser.Image.ImagePath != "Images\\DefaultProfPic\\V1DefaultProfPic.webp")
                     {
                         System.IO.File.Delete(Path.Combine(Directory.GetCurrentDirectory(), updateUser.Image.ImagePath));
                         dbContext.Images.Remove(updateUser.Image);
