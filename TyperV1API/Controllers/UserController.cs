@@ -112,7 +112,7 @@ namespace TyperV1API.Controllers
             }
             else
             {
-                newUser.ImageId = 101;
+                newUser.ImageId = 1;
                 newUser.Image = await dbContext.Images.FindAsync(newUser.ImageId);
             }
 
@@ -195,7 +195,7 @@ namespace TyperV1API.Controllers
                 System.IO.File.Delete(Path.Combine(Directory.GetCurrentDirectory(), result.Image.ImagePath));
             }
 
-            result.ImageId = 101;
+            result.ImageId = 1;
             result.Image = await dbContext.Images.FindAsync(result.ImageId);
 
             dbContext.Users.Update(result);

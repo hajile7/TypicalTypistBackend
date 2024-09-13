@@ -8,8 +8,10 @@ ALTER TABLE UserKeyStats DROP CONSTRAINT IF EXISTS userkeystats_userid_fk;
 ALTER TABLE UserBigraphStats DROP CONSTRAINT IF EXISTS userbigraphstats_userid_fk;
 ALTER TABLE Users DROP CONSTRAINT IF EXISTS users_imageid_fk;
 ALTER TABLE Bigraphs DROP CONSTRAINT IF EXISTS bigraphs_wordid_fk;
+ALTER TABLE UserTypingTests DROP CONSTRAINT IF EXISTS usertypingtests_userid_fk;
 
 -- Drop tables if they exist
+DROP TABLE IF EXISTS UserTypingTests;
 DROP TABLE IF EXISTS UserBigraphStats;
 DROP TABLE IF EXISTS UserKeyStats;
 DROP TABLE IF EXISTS UserStats;
@@ -120,7 +122,16 @@ CREATE TABLE UserTypingTests (
 	Mode NVARCHAR(20),
 	WPM DECIMAL(5, 2),
 	Accuracy DECIMAL(5,2),
+
+	--Primary Key
+	CONSTRAINT usertypingtests_testid_pk PRIMARY KEY (TestId),
+
+	--Foreign Key
+	CONSTRAINT usertypingtests_userid_fk FOREIGN KEY (UserId) REFERENCES Users(UserId)
 );
+
+INSERT INTO Images (ImagePath)
+VALUES('Images/DefaultProfPic/V1DefaultProfilePic.webp')
 
 INSERT INTO Words (Word, [Length], StartsWith)
 VALUES ('ace', LEN('ace'), LEFT('ace', 1)),
@@ -1673,4 +1684,3 @@ VALUES ('minimize', LEN('minimize'), LEFT('minimize', 1)),
 ('most', LEN('most'), LEFT('most', 1)),
 ('us', LEN('us'), LEFT('us', 1));
 
-SELECT * FROM UserTypingTests;
