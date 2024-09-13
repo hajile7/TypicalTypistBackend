@@ -14,6 +14,4 @@ public partial class Word
     public string? StartsWith { get; set; }
 
     public virtual ICollection<Bigraph> Bigraphs { get; set; } = new List<Bigraph>();
-
-    public virtual ICollection<UserStat> UserStats { get; set; } = new List<UserStat>();
 }

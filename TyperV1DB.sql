@@ -1,18 +1,33 @@
-CREATE DATABASE TyperV1;
-
 USE TyperV1;
 
+-- Drop all foreign key constraints
+ALTER TABLE UserStats DROP CONSTRAINT IF EXISTS userstats_userid_fk;
+ALTER TABLE UserStats DROP CONSTRAINT IF EXISTS userstats_wordid_fk;
+ALTER TABLE UserStats DROP CONSTRAINT IF EXISTS userstats_bigraphid_fk;
+ALTER TABLE UserKeyStats DROP CONSTRAINT IF EXISTS userkeystats_userid_fk;
+ALTER TABLE UserBigraphStats DROP CONSTRAINT IF EXISTS userbigraphstats_userid_fk;
+ALTER TABLE Users DROP CONSTRAINT IF EXISTS users_imageid_fk;
+ALTER TABLE Bigraphs DROP CONSTRAINT IF EXISTS bigraphs_wordid_fk;
+
+-- Drop tables if they exist
+DROP TABLE IF EXISTS UserBigraphStats;
+DROP TABLE IF EXISTS UserKeyStats;
+DROP TABLE IF EXISTS UserStats;
+DROP TABLE IF EXISTS Bigraphs;
+DROP TABLE IF EXISTS Words;
+DROP TABLE IF EXISTS Users;
+DROP TABLE IF EXISTS Images;
+
 CREATE TABLE Images(
-	ImageId INT IDENTITY(101, 1),
+	ImageId INT IDENTITY(1, 1),
 	ImagePath NVARCHAR(1000) NOT NULL,
 
-	--Constraints
-	--Primary Key
+	-- Primary Key
 	CONSTRAINT images_imageid_pk PRIMARY KEY (ImageId)
 );
 
 CREATE TABLE [Users](
-	UserId INT IDENTITY(101, 1),
+	UserId INT IDENTITY(1, 1),
 	[FirstName] NVARCHAR(40) NOT NULL,
 	[LastName] NVARCHAR(40) NOT NULL,
 	UserName NVARCHAR(40) NOT NULL,
@@ -21,97 +36,91 @@ CREATE TABLE [Users](
 	ImageId INT,
 	Active BIT NOT NULL DEFAULT '1',
 
-	--Constraints
-	--Primary Key
+	-- Primary Key
 	CONSTRAINT users_userid_pk PRIMARY KEY (UserId),
 
-	--Foreign Keys
+	-- Foreign Key
 	CONSTRAINT users_imageid_fk FOREIGN KEY (ImageId) REFERENCES Images(ImageId)
 );
 
 CREATE TABLE Words (
-    WordId INT IDENTITY(101,1),
+    WordId INT IDENTITY(1,1),
     Word NVARCHAR(100) NOT NULL,
     [Length] INT NOT NULL,           
     StartsWith NCHAR(1),            
 
-	--Constraints
-	--Primary Key
+	-- Primary Key
 	CONSTRAINT words_wordid_pk PRIMARY KEY (WordId)
 );
 
 CREATE TABLE Bigraphs (
-    BigraphId INT IDENTITY(101,1),
+    BigraphId INT IDENTITY(1,1),
     Bigraph NVARCHAR(2) NOT NULL, 
     WordId INT,
 	
-	--Constraints
-	--Primary Key
+	-- Primary Key
 	CONSTRAINT bigraphs_bigraphid_pk PRIMARY KEY (BigraphId),
-	--Foreign Key
+	-- Foreign Key
 	CONSTRAINT bigraphs_wordid_fk FOREIGN KEY (WordId) REFERENCES Words(WordId) 
 );
 
 CREATE TABLE UserStats (
-	StatId INT IDENTITY(101, 1),
+	StatId INT IDENTITY(1, 1),
 	UserId INT,
-	WordId INT,
 	BigraphId INT,
-	InitialLetter NCHAR(1),
-	WordLength INT,
-	Correct INT DEFAULT 0,
-	Incorrect INT DEFAULT 0,
-	CharCorrect INT DEFAULT 0,
-	CharIncorrect INT DEFAULT 0,
-	WPM INT DEFAULT 0,
-	CPM INT DEFAULT 0,
-	Accuracy AS (CAST(Correct AS DECIMAL(5,2)) / NULLIF(Correct + Incorrect, 0) * 100) PERSISTED,
+	TopWPM DECIMAL(5,2) DEFAULT 0,
+	WPM DECIMAL(5,2) DEFAULT 0,
+	CPM DECIMAL(5,2) DEFAULT 0,
+	TopAccuracy DECIMAL(5,2) DEFAULT 0,
+	Accuracy DECIMAL(5,2) DEFAULT 0
 
-	--Constraints
-	--Primary Key
+	-- Primary Key
 	CONSTRAINT userstats_statid_pk PRIMARY KEY (StatId),
 
-	--Foreign Keys
+	-- Foreign Keys
 	CONSTRAINT userstats_userid_fk FOREIGN KEY (UserId) REFERENCES Users(UserId),
-	CONSTRAINT userstats_wordid_fk FOREIGN KEY (WordId) REFERENCES Words(WordId),
 	CONSTRAINT userstats_bigraphid_fk FOREIGN KEY (BigraphId) REFERENCES Bigraphs(BigraphId)
 );
 
 CREATE TABLE UserKeyStats (
-    KeyStatId INT IDENTITY(101,1),
+    KeyStatId INT IDENTITY(1,1),
     UserId INT,
     [Key] NCHAR(1) NOT NULL,                   
     TotalTyped INT DEFAULT 0,                
-    CorrectTyped INT DEFAULT 0,             
-    IncorrectTyped INT DEFAULT 0,           
-    KeyAccuracy AS (CAST(CorrectTyped AS DECIMAL(5,2)) / NULLIF(TotalTyped, 0) * 100) PERSISTED, 
+    Accuracy INT DEFAULT 0,
+	Speed INT DEFAULT 0
 
-	--Constraints
-	--Primary Key
+	-- Primary Key
 	CONSTRAINT userkeystats_keystatid_pk PRIMARY KEY (KeyStatId),
 
-	--Foreign Key
+	-- Foreign Key
 	CONSTRAINT userkeystats_userid_fk FOREIGN KEY (UserId) REFERENCES Users(UserId)
 );
 
 CREATE TABLE UserBigraphStats (
-    BigraphStatId INT IDENTITY(101,1),
+    BigraphStatId INT IDENTITY(1,1),
     UserId INT FOREIGN KEY REFERENCES Users(UserId),
     StartingKey NCHAR(1) NOT NULL,          
     Bigraph NVARCHAR(2) NOT NULL,           
     TotalTyped INT DEFAULT 0,               
-    CorrectTyped INT DEFAULT 0,             
-    IncorrectTyped INT DEFAULT 0,           
-    BigraphAccuracy AS (CAST(CorrectTyped AS DECIMAL(5,2)) / NULLIF(TotalTyped, 0) * 100) PERSISTED,
+    Accuracy DECIMAL(5,2),
+	Speed DECIMAL(5,2)
 
-	--Contraints
-	--Primary Key
+	-- Primary Key
 	CONSTRAINT userbigraphstats_bigraphstatid_pk PRIMARY KEY (BigraphStatId),
 
-	--Foreign Key
+	-- Foreign Key
 	CONSTRAINT userbigraphstats_userid_fk FOREIGN KEY (UserId) REFERENCES Users(UserId)
 );
 
+CREATE TABLE UserTypingTests (
+	TestId INT IDENTITY(1,1),
+	UserId INT NOT NULL,
+	TestDate DATETIME NOT NULL,
+	Mode NVARCHAR(20),
+	WPM DECIMAL(5, 2),
+	Accuracy DECIMAL(5,2),
+);
 
 INSERT INTO Words (Word, [Length], StartsWith)
 VALUES ('ace', LEN('ace'), LEFT('ace', 1)),
@@ -1664,10 +1673,4 @@ VALUES ('minimize', LEN('minimize'), LEFT('minimize', 1)),
 ('most', LEN('most'), LEFT('most', 1)),
 ('us', LEN('us'), LEFT('us', 1));
 
-ALTER TABLE UserStats ADD CONSTRAINT userstats_bigraphid_fk FOREIGN KEY (BigraphId) REFERENCES Bigraphs(BigraphId);
-
-SELECT * FROM Bigraphs;
-
-SELECT * FROM UserStats;
-
-SELECT * FROM Users;
+SELECT * FROM UserTypingTests;

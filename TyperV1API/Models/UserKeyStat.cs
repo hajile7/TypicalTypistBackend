@@ -13,11 +13,9 @@ public partial class UserKeyStat
 
     public int? TotalTyped { get; set; }
 
-    public int? CorrectTyped { get; set; }
+    public int? Accuracy { get; set; }
 
-    public int? IncorrectTyped { get; set; }
-
-    public decimal? KeyAccuracy { get; set; }
+    public int? Speed { get; set; }
 
     public virtual User? User { get; set; }
 }

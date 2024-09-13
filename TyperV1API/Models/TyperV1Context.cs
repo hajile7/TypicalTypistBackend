@@ -27,6 +27,8 @@ public partial class TyperV1Context : DbContext
 
     public virtual DbSet<UserStat> UserStats { get; set; }
 
+    public virtual DbSet<UserTypingTest> UserTypingTests { get; set; }
+
     public virtual DbSet<Word> Words { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -77,12 +79,9 @@ public partial class TyperV1Context : DbContext
         {
             entity.HasKey(e => e.BigraphStatId).HasName("userbigraphstats_bigraphstatid_pk");
 
+            entity.Property(e => e.Accuracy).HasColumnType("decimal(5, 2)");
             entity.Property(e => e.Bigraph).HasMaxLength(2);
-            entity.Property(e => e.BigraphAccuracy)
-                .HasComputedColumnSql("((CONVERT([decimal](5,2),[CorrectTyped])/nullif([TotalTyped],(0)))*(100))", true)
-                .HasColumnType("decimal(20, 13)");
-            entity.Property(e => e.CorrectTyped).HasDefaultValue(0);
-            entity.Property(e => e.IncorrectTyped).HasDefaultValue(0);
+            entity.Property(e => e.Speed).HasColumnType("decimal(5, 2)");
             entity.Property(e => e.StartingKey)
                 .HasMaxLength(1)
                 .IsFixedLength();
@@ -90,21 +89,18 @@ public partial class TyperV1Context : DbContext
 
             entity.HasOne(d => d.User).WithMany(p => p.UserBigraphStats)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__UserBigra__UserI__6477ECF3");
+                .HasConstraintName("FK__UserBigra__UserI__1BC821DD");
         });
 
         modelBuilder.Entity<UserKeyStat>(entity =>
         {
             entity.HasKey(e => e.KeyStatId).HasName("userkeystats_keystatid_pk");
 
-            entity.Property(e => e.CorrectTyped).HasDefaultValue(0);
-            entity.Property(e => e.IncorrectTyped).HasDefaultValue(0);
+            entity.Property(e => e.Accuracy).HasDefaultValue(0);
             entity.Property(e => e.Key)
                 .HasMaxLength(1)
                 .IsFixedLength();
-            entity.Property(e => e.KeyAccuracy)
-                .HasComputedColumnSql("((CONVERT([decimal](5,2),[CorrectTyped])/nullif([TotalTyped],(0)))*(100))", true)
-                .HasColumnType("decimal(20, 13)");
+            entity.Property(e => e.Speed).HasDefaultValue(0);
             entity.Property(e => e.TotalTyped).HasDefaultValue(0);
 
             entity.HasOne(d => d.User).WithMany(p => p.UserKeyStats)
@@ -117,20 +113,22 @@ public partial class TyperV1Context : DbContext
             entity.HasKey(e => e.StatId).HasName("userstats_statid_pk");
 
             entity.Property(e => e.Accuracy)
-                .HasComputedColumnSql("((CONVERT([decimal](5,2),[Correct])/nullif([Correct]+[Incorrect],(0)))*(100))", true)
-                .HasColumnType("decimal(20, 13)");
-            entity.Property(e => e.CharCorrect).HasDefaultValue(0);
-            entity.Property(e => e.CharIncorrect).HasDefaultValue(0);
-            entity.Property(e => e.Correct).HasDefaultValue(0);
+                .HasDefaultValue(0m)
+                .HasColumnType("decimal(5, 2)");
             entity.Property(e => e.Cpm)
-                .HasDefaultValue(0)
+                .HasDefaultValue(0m)
+                .HasColumnType("decimal(5, 2)")
                 .HasColumnName("CPM");
-            entity.Property(e => e.Incorrect).HasDefaultValue(0);
-            entity.Property(e => e.InitialLetter)
-                .HasMaxLength(1)
-                .IsFixedLength();
+            entity.Property(e => e.TopAccuracy)
+                .HasDefaultValue(0m)
+                .HasColumnType("decimal(5, 2)");
+            entity.Property(e => e.TopWpm)
+                .HasDefaultValue(0m)
+                .HasColumnType("decimal(5, 2)")
+                .HasColumnName("TopWPM");
             entity.Property(e => e.Wpm)
-                .HasDefaultValue(0)
+                .HasDefaultValue(0m)
+                .HasColumnType("decimal(5, 2)")
                 .HasColumnName("WPM");
 
             entity.HasOne(d => d.Bigraph).WithMany(p => p.UserStats)
@@ -140,10 +138,19 @@ public partial class TyperV1Context : DbContext
             entity.HasOne(d => d.User).WithMany(p => p.UserStats)
                 .HasForeignKey(d => d.UserId)
                 .HasConstraintName("userstats_userid_fk");
+        });
 
-            entity.HasOne(d => d.Word).WithMany(p => p.UserStats)
-                .HasForeignKey(d => d.WordId)
-                .HasConstraintName("userstats_wordid_fk");
+        modelBuilder.Entity<UserTypingTest>(entity =>
+        {
+            entity.HasNoKey();
+
+            entity.Property(e => e.Accuracy).HasColumnType("decimal(5, 2)");
+            entity.Property(e => e.Mode).HasMaxLength(20);
+            entity.Property(e => e.TestDate).HasColumnType("datetime");
+            entity.Property(e => e.TestId).ValueGeneratedOnAdd();
+            entity.Property(e => e.Wpm)
+                .HasColumnType("decimal(5, 2)")
+                .HasColumnName("WPM");
         });
 
         modelBuilder.Entity<Word>(entity =>

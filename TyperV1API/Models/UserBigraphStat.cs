@@ -15,11 +15,9 @@ public partial class UserBigraphStat
 
     public int? TotalTyped { get; set; }
 
-    public int? CorrectTyped { get; set; }
+    public decimal? Accuracy { get; set; }
 
-    public int? IncorrectTyped { get; set; }
-
-    public decimal? BigraphAccuracy { get; set; }
+    public decimal? Speed { get; set; }
 
     public virtual User? User { get; set; }
 }
