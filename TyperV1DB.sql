@@ -70,8 +70,11 @@ CREATE TABLE UserStats (
 	StatId INT IDENTITY(1, 1),
 	UserId INT,
 	BigraphId INT,
+	CharsTyped INT DEFAULT 0,
+	TimeTyped INT DEFAULT 0,
 	TopWPM DECIMAL(5,2) DEFAULT 0,
 	WPM DECIMAL(5,2) DEFAULT 0,
+	TopCPM DECIMAL(5,2) DEFAULT 0,
 	CPM DECIMAL(5,2) DEFAULT 0,
 	TopAccuracy DECIMAL(5,2) DEFAULT 0,
 	Accuracy DECIMAL(5,2) DEFAULT 0
@@ -119,6 +122,8 @@ CREATE TABLE UserTypingTests (
 	TestId INT IDENTITY(1,1),
 	UserId INT NOT NULL,
 	TestDate DATETIME NOT NULL,
+	CharCount INT DEFAULT 0,
+	IncorrectCount INT DEFAULT 0,
 	Mode NVARCHAR(20),
 	WPM DECIMAL(5, 2),
 	Accuracy DECIMAL(5,2),
@@ -1683,4 +1688,5 @@ VALUES ('minimize', LEN('minimize'), LEFT('minimize', 1)),
 ('day', LEN('day'), LEFT('day', 1)),
 ('most', LEN('most'), LEFT('most', 1)),
 ('us', LEN('us'), LEFT('us', 1));
+
 

@@ -33,7 +33,7 @@ public partial class TyperV1Context : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer(Secret.url);
+        => optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=TyperV1; Integrated Security=SSPI;Encrypt=false;TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -89,7 +89,7 @@ public partial class TyperV1Context : DbContext
 
             entity.HasOne(d => d.User).WithMany(p => p.UserBigraphStats)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__UserBigra__UserI__1BC821DD");
+                .HasConstraintName("FK__UserBigra__UserI__4865BE2A");
         });
 
         modelBuilder.Entity<UserKeyStat>(entity =>
@@ -115,13 +115,19 @@ public partial class TyperV1Context : DbContext
             entity.Property(e => e.Accuracy)
                 .HasDefaultValue(0m)
                 .HasColumnType("decimal(5, 2)");
+            entity.Property(e => e.CharsTyped).HasDefaultValue(0);
             entity.Property(e => e.Cpm)
                 .HasDefaultValue(0m)
                 .HasColumnType("decimal(5, 2)")
                 .HasColumnName("CPM");
+            entity.Property(e => e.TimeTyped).HasDefaultValue(0);
             entity.Property(e => e.TopAccuracy)
                 .HasDefaultValue(0m)
                 .HasColumnType("decimal(5, 2)");
+            entity.Property(e => e.TopCpm)
+                .HasDefaultValue(0m)
+                .HasColumnType("decimal(5, 2)")
+                .HasColumnName("TopCPM");
             entity.Property(e => e.TopWpm)
                 .HasDefaultValue(0m)
                 .HasColumnType("decimal(5, 2)")
@@ -142,15 +148,21 @@ public partial class TyperV1Context : DbContext
 
         modelBuilder.Entity<UserTypingTest>(entity =>
         {
-            entity.HasNoKey();
+            entity.HasKey(e => e.TestId).HasName("usertypingtests_testid_pk");
 
             entity.Property(e => e.Accuracy).HasColumnType("decimal(5, 2)");
+            entity.Property(e => e.CharCount).HasDefaultValue(0);
+            entity.Property(e => e.IncorrectCount).HasDefaultValue(0);
             entity.Property(e => e.Mode).HasMaxLength(20);
             entity.Property(e => e.TestDate).HasColumnType("datetime");
-            entity.Property(e => e.TestId).ValueGeneratedOnAdd();
             entity.Property(e => e.Wpm)
                 .HasColumnType("decimal(5, 2)")
                 .HasColumnName("WPM");
+
+            entity.HasOne(d => d.User).WithMany(p => p.UserTypingTests)
+                .HasForeignKey(d => d.UserId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("usertypingtests_userid_fk");
         });
 
         modelBuilder.Entity<Word>(entity =>

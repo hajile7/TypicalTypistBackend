@@ -28,4 +28,6 @@ public partial class User
     public virtual ICollection<UserKeyStat> UserKeyStats { get; set; } = new List<UserKeyStat>();
 
     public virtual ICollection<UserStat> UserStats { get; set; } = new List<UserStat>();
+
+    public virtual ICollection<UserTypingTest> UserTypingTests { get; set; } = new List<UserTypingTest>();
 }

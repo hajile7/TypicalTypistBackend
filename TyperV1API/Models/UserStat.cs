@@ -11,9 +11,15 @@ public partial class UserStat
 
     public int? BigraphId { get; set; }
 
+    public int? CharsTyped { get; set; }
+
+    public int? TimeTyped { get; set; }
+
     public decimal? TopWpm { get; set; }
 
     public decimal? Wpm { get; set; }
+
+    public decimal? TopCpm { get; set; }
 
     public decimal? Cpm { get; set; }
 

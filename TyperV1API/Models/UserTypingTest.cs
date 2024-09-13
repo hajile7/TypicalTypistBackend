@@ -11,9 +11,15 @@ public partial class UserTypingTest
 
     public DateTime TestDate { get; set; }
 
+    public int? CharCount { get; set; }
+
+    public int? IncorrectCount { get; set; }
+
     public string? Mode { get; set; }
 
     public decimal? Wpm { get; set; }
 
     public decimal? Accuracy { get; set; }
+
+    public virtual User User { get; set; } = null!;
 }
