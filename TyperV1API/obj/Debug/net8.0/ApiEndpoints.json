@@ -135,6 +135,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "TyperV1API.Controllers.UserStatsController",
+    "Method": "sendTestResults",
+    "RelativePath": "api/UserStats",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "testDTO",
+        "Type": "TyperV1API.Models.UserTypingTestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TyperV1API.Controllers.UserStatsController",
+    "Method": "getTestList",
+    "RelativePath": "api/UserStats/UserTests",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "TyperV1API.Controllers.WordsController",
     "Method": "getRandomWords",
     "RelativePath": "api/Words/Random",
