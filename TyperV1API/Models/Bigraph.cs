@@ -11,7 +11,5 @@ public partial class Bigraph
 
     public int? WordId { get; set; }
 
-    public virtual ICollection<UserStat> UserStats { get; set; } = new List<UserStat>();
-
     public virtual Word? Word { get; set; }
 }

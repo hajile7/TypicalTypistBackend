@@ -26,6 +26,58 @@ namespace TyperV1API.Controllers
             };
         }
 
+        [HttpPost("stats")]
+        public async Task<IActionResult> sendStatResults(UserStatDTO statDTO)
+        {
+
+            if (statDTO == null)
+            {
+                return BadRequest(new { Message = "Invalid stat data." });
+            }
+
+            var existingStat = await dbContext.UserStats.FirstOrDefaultAsync(u => u.UserId == statDTO.UserId);
+
+            if (existingStat == null)
+            {
+                UserStat userStat = new UserStat();
+
+                userStat.UserId = statDTO.UserId;
+                userStat.CharsTyped = statDTO.CharsTyped;
+                userStat.TimeTyped = statDTO.TimeTyped;
+                userStat.Wpm= statDTO.WPM;
+                userStat.TopWpm = statDTO.WPM;
+                userStat.Cpm = 0;                           //setting CPM stats to zero for now... depends on if I implement char mode later.
+                userStat.TopCpm = 0;
+                userStat.Accuracy = statDTO.Accuracy;
+                userStat.TopAccuracy = statDTO.Accuracy;
+
+                dbContext.UserStats.Add(userStat);
+
+            }
+
+            else
+            {
+                existingStat.CharsTyped += statDTO.CharsTyped;
+                existingStat.TimeTyped += statDTO.TimeTyped;
+                existingStat.Accuracy = (existingStat.Accuracy + statDTO.Accuracy) / 2;
+                existingStat.Wpm = (existingStat.Wpm + statDTO.WPM) / 2;
+                if(statDTO.Accuracy > existingStat.TopAccuracy)
+                {
+                    existingStat.TopAccuracy = statDTO.Accuracy;
+                }
+                if (statDTO.WPM > existingStat.TopWpm)
+                {
+                    existingStat.TopWpm = statDTO.WPM;
+                }
+            }
+
+
+            await dbContext.SaveChangesAsync();
+
+            return Ok();
+
+        }
+
         [HttpPost("tests")]
         public async Task<IActionResult> sendTestResults(UserTypingTestDTO testDTO)
         {
@@ -58,7 +110,7 @@ namespace TyperV1API.Controllers
 
             if (statArr == null)
             {
-                return BadRequest(new { Message = "Inavlid bigraph data." });
+                return BadRequest(new { Message = "Invalid bigraph data." });
             }
 
             foreach (var bigraphStatDTO in statArr)
@@ -173,6 +225,20 @@ namespace TyperV1API.Controllers
             if (result.Count == 0)
             {
                 return NotFound(new { Message = "No bigraph data found for user." });
+            }
+
+            return Ok(result);
+
+        }
+
+        [HttpGet("UserStats")]
+        public async Task<IActionResult> getUserStats(int userId)
+        {
+            UserStat result = await dbContext.UserStats.FirstOrDefaultAsync(t => t.UserId == userId);
+
+            if (result == null)
+            {
+                return NotFound(new { Message = "No stat data found for user." });
             }
 
             return Ok(result);

@@ -66,34 +66,13 @@ CREATE TABLE Bigraphs (
 	CONSTRAINT bigraphs_wordid_fk FOREIGN KEY (WordId) REFERENCES Words(WordId) 
 );
 
-CREATE TABLE UserStats (
-	StatId INT IDENTITY(1, 1),
-	UserId INT,
-	BigraphId INT,
-	CharsTyped INT DEFAULT 0,
-	TimeTyped INT DEFAULT 0,
-	TopWPM DECIMAL(5,2) DEFAULT 0,
-	WPM DECIMAL(5,2) DEFAULT 0,
-	TopCPM DECIMAL(5,2) DEFAULT 0,
-	CPM DECIMAL(5,2) DEFAULT 0,
-	TopAccuracy DECIMAL(5,2) DEFAULT 0,
-	Accuracy DECIMAL(5,2) DEFAULT 0
-
-	-- Primary Key
-	CONSTRAINT userstats_statid_pk PRIMARY KEY (StatId),
-
-	-- Foreign Keys
-	CONSTRAINT userstats_userid_fk FOREIGN KEY (UserId) REFERENCES Users(UserId),
-	CONSTRAINT userstats_bigraphid_fk FOREIGN KEY (BigraphId) REFERENCES Bigraphs(BigraphId)
-);
-
 CREATE TABLE UserKeyStats (
     KeyStatId INT IDENTITY(1,1),
     UserId INT,
     [Key] NCHAR(1) NOT NULL,                   
     TotalTyped INT DEFAULT 0,                
     Accuracy DECIMAL(5,2) DEFAULT 0,
-	Speed DECIMAL(5,2) DEFAULT 0
+	Speed DECIMAL(5,3) DEFAULT 0
 
 	-- Primary Key
 	CONSTRAINT userkeystats_keystatid_pk PRIMARY KEY (KeyStatId),
@@ -109,7 +88,7 @@ CREATE TABLE UserBigraphStats (
     Bigraph NVARCHAR(2) NOT NULL,           
     TotalTyped INT DEFAULT 0,               
     Accuracy DECIMAL(5,2),
-	Speed DECIMAL(5,2)
+	Speed DECIMAL(5,3)
 
 	-- Primary Key
 	CONSTRAINT userbigraphstats_bigraphstatid_pk PRIMARY KEY (BigraphStatId),
@@ -133,6 +112,26 @@ CREATE TABLE UserTypingTests (
 
 	--Foreign Key
 	CONSTRAINT usertypingtests_userid_fk FOREIGN KEY (UserId) REFERENCES Users(UserId)
+);
+
+CREATE TABLE UserStats (
+	StatId INT IDENTITY(1, 1),
+	UserId INT,
+	BigraphId INT,
+	CharsTyped INT DEFAULT 0,
+	TimeTyped INT DEFAULT 0,
+	TopWPM DECIMAL(5,2) DEFAULT 0,
+	WPM DECIMAL(5,2) DEFAULT 0,
+	TopCPM DECIMAL(5,2) DEFAULT 0,
+	CPM DECIMAL(5,2) DEFAULT 0,
+	TopAccuracy DECIMAL(5,2) DEFAULT 0,
+	Accuracy DECIMAL(5,2) DEFAULT 0
+
+	-- Primary Key
+	CONSTRAINT userstats_statid_pk PRIMARY KEY (StatId),
+
+	-- Foreign Keys
+	CONSTRAINT userstats_userid_fk FOREIGN KEY (UserId) REFERENCES Users(UserId),
 );
 
 INSERT INTO Images (ImagePath)
@@ -161,7 +160,6 @@ VALUES ('ace', LEN('ace'), LEFT('ace', 1)),
 ('ash', LEN('ash'), LEFT('ash', 1)),
 ('ask', LEN('ask'), LEFT('ask', 1)),
 ('asp', LEN('asp'), LEFT('asp', 1)),
-('ass', LEN('ass'), LEFT('ass', 1)),
 ('ate', LEN('ate'), LEFT('ate', 1)),
 ('awe', LEN('awe'), LEFT('awe', 1)),
 ('bad', LEN('bad'), LEFT('bad', 1)),

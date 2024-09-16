@@ -81,7 +81,7 @@ public partial class TyperV1Context : DbContext
 
             entity.Property(e => e.Accuracy).HasColumnType("decimal(5, 2)");
             entity.Property(e => e.Bigraph).HasMaxLength(2);
-            entity.Property(e => e.Speed).HasColumnType("decimal(5, 2)");
+            entity.Property(e => e.Speed).HasColumnType("decimal(5, 3)");
             entity.Property(e => e.StartingKey)
                 .HasMaxLength(1)
                 .IsFixedLength();
@@ -89,7 +89,7 @@ public partial class TyperV1Context : DbContext
 
             entity.HasOne(d => d.User).WithMany(p => p.UserBigraphStats)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__UserBigra__UserI__6D9742D9");
+                .HasConstraintName("FK__UserBigra__UserI__51BA1E3A");
         });
 
         modelBuilder.Entity<UserKeyStat>(entity =>
@@ -104,7 +104,7 @@ public partial class TyperV1Context : DbContext
                 .IsFixedLength();
             entity.Property(e => e.Speed)
                 .HasDefaultValue(0m)
-                .HasColumnType("decimal(5, 2)");
+                .HasColumnType("decimal(5, 3)");
             entity.Property(e => e.TotalTyped).HasDefaultValue(0);
 
             entity.HasOne(d => d.User).WithMany(p => p.UserKeyStats)
@@ -140,10 +140,6 @@ public partial class TyperV1Context : DbContext
                 .HasDefaultValue(0m)
                 .HasColumnType("decimal(5, 2)")
                 .HasColumnName("WPM");
-
-            entity.HasOne(d => d.Bigraph).WithMany(p => p.UserStats)
-                .HasForeignKey(d => d.BigraphId)
-                .HasConstraintName("userstats_bigraphid_fk");
 
             entity.HasOne(d => d.User).WithMany(p => p.UserStats)
                 .HasForeignKey(d => d.UserId)

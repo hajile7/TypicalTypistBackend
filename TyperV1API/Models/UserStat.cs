@@ -27,7 +27,5 @@ public partial class UserStat
 
     public decimal? Accuracy { get; set; }
 
-    public virtual Bigraph? Bigraph { get; set; }
-
     public virtual User? User { get; set; }
 }
