@@ -136,8 +136,24 @@
   },
   {
     "ContainingType": "TyperV1API.Controllers.UserStatsController",
+    "Method": "sendBigraphResults",
+    "RelativePath": "api/UserStats/bigraphs",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "statArr",
+        "Type": "TyperV1API.Models.userBigraphStatDTO[]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TyperV1API.Controllers.UserStatsController",
     "Method": "sendTestResults",
-    "RelativePath": "api/UserStats",
+    "RelativePath": "api/UserStats/tests",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

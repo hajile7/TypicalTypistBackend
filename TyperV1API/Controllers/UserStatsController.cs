@@ -26,7 +26,7 @@ namespace TyperV1API.Controllers
             };
         }
 
-        [HttpPost]
+        [HttpPost("tests")]
         public async Task<IActionResult> sendTestResults(UserTypingTestDTO testDTO)
         {
 
@@ -50,6 +50,48 @@ namespace TyperV1API.Controllers
 
             return Ok();
             
+        }
+
+        [HttpPost("bigraphs")]
+        public async Task<IActionResult> sendBigraphResults (userBigraphStatDTO[] statArr)
+        {
+
+            if (statArr == null)
+            {
+                return BadRequest(new { Message = "Inavlid bigraph data." });
+            }
+
+            foreach (var bigraphStatDTO in statArr)
+            {
+                var existingStat = await dbContext.UserBigraphStats.FirstOrDefaultAsync(stat =>
+                stat.UserId == bigraphStatDTO.UserId && stat.Bigraph == bigraphStatDTO.Bigraph);
+
+                if (existingStat == null)
+                {
+                    UserBigraphStat userBigraph = new UserBigraphStat();
+
+                    userBigraph.UserId = bigraphStatDTO.UserId;
+                    userBigraph.StartingKey = bigraphStatDTO.Bigraph[0].ToString();
+                    userBigraph.Bigraph = bigraphStatDTO.Bigraph;
+                    userBigraph.TotalTyped = bigraphStatDTO.Quantity;
+                    userBigraph.Accuracy = bigraphStatDTO.Accuracy;
+                    userBigraph.Speed = bigraphStatDTO.Speed;
+
+                    dbContext.Add(userBigraph);
+
+                }
+                else
+                {
+                    existingStat.TotalTyped += bigraphStatDTO.Quantity;
+                    existingStat.Accuracy = (existingStat.Accuracy + bigraphStatDTO.Accuracy) / 2;
+                    existingStat.Speed = (existingStat.Speed + bigraphStatDTO.Speed) / 2;
+                }
+
+            }
+
+            await dbContext.SaveChangesAsync();
+            return Ok();
+
         }
 
         [HttpGet("UserTests")]
