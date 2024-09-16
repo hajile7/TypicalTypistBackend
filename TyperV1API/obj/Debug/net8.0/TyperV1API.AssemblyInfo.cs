@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TyperV1API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f180b0e063f76331a9e5998924c9d27f23b2f9ef")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+485d16a2f3e5e4ac7b6b3387ff05218c531ee608")]
 [assembly: System.Reflection.AssemblyProductAttribute("TyperV1API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TyperV1API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

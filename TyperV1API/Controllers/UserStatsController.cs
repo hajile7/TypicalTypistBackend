@@ -94,6 +94,47 @@ namespace TyperV1API.Controllers
 
         }
 
+        [HttpPost("keys")]
+        public async Task<IActionResult> sendKeyResults(UserKeyStatDTO[] statArr)
+        {
+
+            if (statArr == null)
+            {
+                return BadRequest(new { Message = "Inavlid key data." });
+            }
+
+            foreach (var userKeyStatDTO in statArr)
+            {
+                var existingStat = await dbContext.UserKeyStats.FirstOrDefaultAsync(stat =>
+                stat.UserId == userKeyStatDTO.UserId && stat.Key == userKeyStatDTO.Key);
+
+                if (existingStat == null)
+                {
+                    UserKeyStat keyStat = new UserKeyStat();
+
+                    keyStat.UserId = userKeyStatDTO.UserId;
+                    keyStat.Key = userKeyStatDTO.Key;
+                    keyStat.TotalTyped = userKeyStatDTO.TotalTyped;
+                    keyStat.Accuracy = userKeyStatDTO.Accuracy;
+                    keyStat.Speed = userKeyStatDTO.Speed;
+
+                    dbContext.Add(keyStat);
+
+                }
+                else
+                {
+                    existingStat.TotalTyped += userKeyStatDTO.TotalTyped;
+                    existingStat.Accuracy = (existingStat.Accuracy + userKeyStatDTO.Accuracy) / 2;
+                    existingStat.Speed = (existingStat.Speed + userKeyStatDTO.Speed) / 2;
+                }
+
+            }
+
+            await dbContext.SaveChangesAsync();
+            return Ok();
+
+        }
+
         [HttpGet("UserTests")]
         public async Task<IActionResult> getTestList(int userId)
         {
@@ -107,6 +148,34 @@ namespace TyperV1API.Controllers
             List<UserTypingTestDTO> formattedResult = result.Select(t => convertToTestDTO(t)).ToList();
 
             return Ok(formattedResult);
+
+        }
+
+        [HttpGet("UserBigraphs")]
+        public async Task<IActionResult> getBigraphStats(int userId)
+        {
+            List<UserBigraphStat> result = await dbContext.UserBigraphStats.Where(t => t.UserId == userId).ToListAsync();
+
+            if (result.Count == 0)
+            {
+                return NotFound(new { Message = "No bigraph data found for user." });
+            }
+
+            return Ok(result);
+
+        }
+
+        [HttpGet("UserKeys")]
+        public async Task<IActionResult> getKeyStats(int userId)
+        {
+            List<UserKeyStat> result = await dbContext.UserKeyStats.Where(t => t.UserId == userId).ToListAsync();
+
+            if (result.Count == 0)
+            {
+                return NotFound(new { Message = "No bigraph data found for user." });
+            }
+
+            return Ok(result);
 
         }
     }

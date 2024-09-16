@@ -92,8 +92,8 @@ CREATE TABLE UserKeyStats (
     UserId INT,
     [Key] NCHAR(1) NOT NULL,                   
     TotalTyped INT DEFAULT 0,                
-    Accuracy INT DEFAULT 0,
-	Speed INT DEFAULT 0
+    Accuracy DECIMAL(5,2) DEFAULT 0,
+	Speed DECIMAL(5,2) DEFAULT 0
 
 	-- Primary Key
 	CONSTRAINT userkeystats_keystatid_pk PRIMARY KEY (KeyStatId),
@@ -1688,5 +1688,3 @@ VALUES ('minimize', LEN('minimize'), LEFT('minimize', 1)),
 ('day', LEN('day'), LEFT('day', 1)),
 ('most', LEN('most'), LEFT('most', 1)),
 ('us', LEN('us'), LEFT('us', 1));
-
-

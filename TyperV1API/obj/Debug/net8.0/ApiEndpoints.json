@@ -152,6 +152,22 @@
   },
   {
     "ContainingType": "TyperV1API.Controllers.UserStatsController",
+    "Method": "sendKeyResults",
+    "RelativePath": "api/UserStats/keys",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "statArr",
+        "Type": "TyperV1API.Models.UserKeyStatDTO[]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TyperV1API.Controllers.UserStatsController",
     "Method": "sendTestResults",
     "RelativePath": "api/UserStats/tests",
     "HttpMethod": "POST",
@@ -162,6 +178,38 @@
         "Name": "testDTO",
         "Type": "TyperV1API.Models.UserTypingTestDTO",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TyperV1API.Controllers.UserStatsController",
+    "Method": "getBigraphStats",
+    "RelativePath": "api/UserStats/UserBigraphs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TyperV1API.Controllers.UserStatsController",
+    "Method": "getKeyStats",
+    "RelativePath": "api/UserStats/UserKeys",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

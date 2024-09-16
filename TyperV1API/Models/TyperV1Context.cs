@@ -89,18 +89,22 @@ public partial class TyperV1Context : DbContext
 
             entity.HasOne(d => d.User).WithMany(p => p.UserBigraphStats)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__UserBigra__UserI__4865BE2A");
+                .HasConstraintName("FK__UserBigra__UserI__6D9742D9");
         });
 
         modelBuilder.Entity<UserKeyStat>(entity =>
         {
             entity.HasKey(e => e.KeyStatId).HasName("userkeystats_keystatid_pk");
 
-            entity.Property(e => e.Accuracy).HasDefaultValue(0);
+            entity.Property(e => e.Accuracy)
+                .HasDefaultValue(0m)
+                .HasColumnType("decimal(5, 2)");
             entity.Property(e => e.Key)
                 .HasMaxLength(1)
                 .IsFixedLength();
-            entity.Property(e => e.Speed).HasDefaultValue(0);
+            entity.Property(e => e.Speed)
+                .HasDefaultValue(0m)
+                .HasColumnType("decimal(5, 2)");
             entity.Property(e => e.TotalTyped).HasDefaultValue(0);
 
             entity.HasOne(d => d.User).WithMany(p => p.UserKeyStats)
