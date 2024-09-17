@@ -100,7 +100,7 @@ CREATE TABLE UserBigraphStats (
 CREATE TABLE UserTypingTests (
 	TestId INT IDENTITY(1,1),
 	UserId INT NOT NULL,
-	TestDate DATETIME NOT NULL,
+	TestDate DATETIME2,
 	CharCount INT DEFAULT 0,
 	IncorrectCount INT DEFAULT 0,
 	Mode NVARCHAR(20),

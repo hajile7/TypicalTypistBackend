@@ -9,7 +9,7 @@ public partial class UserTypingTest
 
     public int UserId { get; set; }
 
-    public DateTime TestDate { get; set; }
+    public DateTime? TestDate { get; set; }
 
     public int? CharCount { get; set; }
 

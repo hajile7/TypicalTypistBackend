@@ -89,7 +89,7 @@ public partial class TyperV1Context : DbContext
 
             entity.HasOne(d => d.User).WithMany(p => p.UserBigraphStats)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__UserBigra__UserI__51BA1E3A");
+                .HasConstraintName("FK__UserBigra__UserI__75F77EB0");
         });
 
         modelBuilder.Entity<UserKeyStat>(entity =>
@@ -154,7 +154,6 @@ public partial class TyperV1Context : DbContext
             entity.Property(e => e.CharCount).HasDefaultValue(0);
             entity.Property(e => e.IncorrectCount).HasDefaultValue(0);
             entity.Property(e => e.Mode).HasMaxLength(20);
-            entity.Property(e => e.TestDate).HasColumnType("datetime");
             entity.Property(e => e.Wpm)
                 .HasColumnType("decimal(5, 2)")
                 .HasColumnName("WPM");

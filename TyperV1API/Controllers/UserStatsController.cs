@@ -18,11 +18,13 @@ namespace TyperV1API.Controllers
             return new UserTypingTestDTO
             {
                 userId = test.UserId,
+                date = test.TestDate,
                 CharCount = test.CharCount,
                 incorrectCount = test.IncorrectCount,
                 Mode = test.Mode,
                 Speed = test.Wpm,
                 Accuracy = test.Accuracy
+
             };
         }
 
@@ -90,7 +92,7 @@ namespace TyperV1API.Controllers
             UserTypingTest typingTest = new UserTypingTest();
 
             typingTest.UserId = testDTO.userId;
-            typingTest.TestDate = DateTime.Now;
+            typingTest.TestDate = testDTO.date;
             typingTest.CharCount = testDTO.CharCount;
             typingTest.IncorrectCount = testDTO.incorrectCount;
             typingTest.Mode = testDTO.Mode;

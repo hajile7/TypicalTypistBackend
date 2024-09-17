@@ -8,5 +8,6 @@
         public decimal? WPM { get; set; }
         public decimal? Accuracy { get; set; }
 
+
     }
 }
