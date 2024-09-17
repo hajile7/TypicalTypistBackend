@@ -28,6 +28,20 @@ namespace TyperV1API.Controllers
             };
         }
 
+        static UserKeyStatDTO convertToKeyStatDTO(UserKeyStat stat)
+        {
+            return new UserKeyStatDTO
+            {
+                UserId = stat.UserId,
+                Key = stat.Key,
+                TotalTyped = stat.TotalTyped,
+                Accuracy = stat.Accuracy,
+                Speed = stat.Speed
+            };
+        }
+
+        //HTTP calls
+
         [HttpPost("stats")]
         public async Task<IActionResult> sendStatResults(UserStatDTO statDTO)
         {
@@ -228,6 +242,8 @@ namespace TyperV1API.Controllers
             {
                 return NotFound(new { Message = "No bigraph data found for user." });
             }
+
+            List<UserKeyStatDTO> formattedResult = result.Select(t => convertToKeyStatDTO(t)).ToList();
 
             return Ok(result);
 
