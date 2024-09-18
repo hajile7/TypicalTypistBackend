@@ -233,6 +233,29 @@ namespace TyperV1API.Controllers
 
         }
 
+        [HttpGet("UserSpecificBigraphs")]
+        public async Task<IActionResult> getUserSpecificBigraphs(int userId, string key)
+        {
+            if (key.Length != 1)
+            {
+                return BadRequest(new { Message = "The key must be a single character." });
+            }
+
+            char keyChar = key[0];
+
+            List<UserBigraphStat> result = await dbContext.UserBigraphStats
+                .Where(t => t.UserId == userId && (t.StartingKey == key || t.Bigraph.Substring(1, 1) == key))
+                .ToListAsync();
+
+            if (result.Count == 0)
+            {
+                return NotFound(new { Message = "No bigraph data found for given parameters." });
+            }
+
+            return Ok(result);
+
+        }
+
         [HttpGet("UserKeys")]
         public async Task<IActionResult> getKeyStats(int userId)
         {

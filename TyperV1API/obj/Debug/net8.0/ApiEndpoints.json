@@ -232,6 +232,27 @@
   },
   {
     "ContainingType": "TyperV1API.Controllers.UserStatsController",
+    "Method": "getUserSpecificBigraphs",
+    "RelativePath": "api/UserStats/UserSpecificBigraphs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "key",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TyperV1API.Controllers.UserStatsController",
     "Method": "getUserStats",
     "RelativePath": "api/UserStats/UserStats",
     "HttpMethod": "GET",
