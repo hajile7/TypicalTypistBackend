@@ -14,8 +14,8 @@ namespace TyperV1API.Controllers
         [HttpGet("Random")]
         public async Task<IActionResult> getRandomWords()
         {
-            int minChars = 112;
-            int maxChars = 118;
+            int minChars = 142;
+            int maxChars = 144;
             int totalCharCount = 0;
 
             Random random = new Random();
@@ -31,6 +31,7 @@ namespace TyperV1API.Controllers
                 totalCharCount += word.Length;
                 if (totalCharCount > maxChars)
                 {
+
                     break;
                 }
 
