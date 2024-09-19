@@ -50,7 +50,7 @@
               "RelativeDocumentMoniker": "TyperV1API\\Controllers\\UserStatsController.cs",
               "ToolTip": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Controllers\\UserStatsController.cs",
               "RelativeToolTip": "TyperV1API\\Controllers\\UserStatsController.cs",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAwwG8AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-19T19:07:12.508Z",
               "EditorCaption": ""
@@ -65,8 +65,7 @@
               "RelativeToolTip": "TyperV1API\\Controllers\\UserController.cs",
               "ViewState": "AgIAAFgAAAAAAAAAAAAcwGIAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T15:49:43.966Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T15:49:43.966Z"
             }
           ]
         },
@@ -84,8 +83,7 @@
               "RelativeToolTip": "TyperV1API\\Models\\UserDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T19:05:28.578Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-19T19:05:28.578Z"
             },
             {
               "$type": "Document",
@@ -97,8 +95,7 @@
               "RelativeToolTip": "TyperV1API\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T19:04:35.528Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-19T19:04:35.528Z"
             },
             {
               "$type": "Document",

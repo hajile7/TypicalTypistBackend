@@ -103,6 +103,19 @@ namespace TyperV1API.Controllers
                 return BadRequest(new { Message = "Invalid test data." });
             }
 
+            // Check how many tests user has
+            var userTests = dbContext.UserTypingTests
+                                     .Where(test => test.UserId == testDTO.userId)
+                                     .OrderBy(test => test.TestDate)
+                                     .ToList();
+
+            // If >10, remove oldest one
+            if (userTests.Count >= 10)
+            {
+                var oldestTest = userTests.First();
+                dbContext.UserTypingTests.Remove(oldestTest);
+            }
+
             UserTypingTest typingTest = new UserTypingTest();
 
             typingTest.UserId = testDTO.userId;
