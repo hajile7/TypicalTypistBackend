@@ -7,36 +7,24 @@
       "RelativeMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|solutionrelative:typerv1api\\controllers\\userstatscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|c:\\users\\eli\\source\\repos\\my stuff\\typerv1\\typerv1backend\\typerv1api\\typerv1api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|solutionrelative:typerv1api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|c:\\users\\eli\\source\\repos\\my stuff\\typerv1\\typerv1backend\\typerv1api\\typerv1api\\controllers\\wordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|solutionrelative:typerv1api\\controllers\\wordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|c:\\users\\eli\\source\\repos\\my stuff\\typerv1\\typerv1backend\\typerv1api\\typerv1api\\models\\userkeystatdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|solutionrelative:typerv1api\\models\\userkeystatdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|c:\\users\\eli\\source\\repos\\my stuff\\typerv1\\typerv1backend\\typerv1api\\typerv1api\\models\\userstat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|solutionrelative:typerv1api\\models\\userstat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|c:\\users\\eli\\source\\repos\\my stuff\\typerv1\\typerv1backend\\typerv1api\\typerv1api\\models\\userbigraphstat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|solutionrelative:typerv1api\\models\\userbigraphstat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|c:\\users\\eli\\source\\repos\\my stuff\\typerv1\\typerv1backend\\typerv1api\\typerv1api\\models\\usertypingtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|solutionrelative:typerv1api\\models\\usertypingtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|c:\\users\\eli\\source\\repos\\my stuff\\typerv1\\typerv1backend\\typerv1api\\typerv1api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|solutionrelative:typerv1api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|c:\\users\\eli\\source\\repos\\my stuff\\typerv1\\typerv1backend\\typerv1api\\typerv1api\\models\\usertypingtestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|solutionrelative:typerv1api\\models\\usertypingtestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|c:\\users\\eli\\source\\repos\\my stuff\\typerv1\\typerv1backend\\typerv1api\\typerv1api\\models\\typerv1context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|solutionrelative:typerv1api\\models\\typerv1context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|c:\\users\\eli\\source\\repos\\my stuff\\typerv1\\typerv1backend\\typerv1api\\typerv1api\\models\\userstatdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}|TyperV1API\\TyperV1API.csproj|solutionrelative:typerv1api\\models\\userstatdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -60,7 +48,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "WordsController.cs",
               "DocumentMoniker": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Controllers\\WordsController.cs",
               "RelativeDocumentMoniker": "TyperV1API\\Controllers\\WordsController.cs",
@@ -68,12 +56,11 @@
               "RelativeToolTip": "TyperV1API\\Controllers\\WordsController.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T17:58:16.487Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-18T17:58:16.487Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "TyperV1API\\Controllers\\UserController.cs",
@@ -85,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "TyperV1Context.cs",
               "DocumentMoniker": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Models\\TyperV1Context.cs",
               "RelativeDocumentMoniker": "TyperV1API\\Models\\TyperV1Context.cs",
@@ -115,65 +102,22 @@
               "RelativeDocumentMoniker": "TyperV1API\\Controllers\\UserStatsController.cs",
               "ToolTip": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Controllers\\UserStatsController.cs",
               "RelativeToolTip": "TyperV1API\\Controllers\\UserStatsController.cs",
-              "ViewState": "AgIAAN0AAAAAAAAAAADwv/gAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAYwPgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-14T01:58:00.982Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 144,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserTypingTestDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Models\\UserTypingTestDTO.cs",
-              "RelativeDocumentMoniker": "TyperV1API\\Models\\UserTypingTestDTO.cs",
-              "ToolTip": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Models\\UserTypingTestDTO.cs",
-              "RelativeToolTip": "TyperV1API\\Models\\UserTypingTestDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T02:39:15.119Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserKeyStatDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Models\\UserKeyStatDTO.cs",
-              "RelativeDocumentMoniker": "TyperV1API\\Models\\UserKeyStatDTO.cs",
-              "ToolTip": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Models\\UserKeyStatDTO.cs",
-              "RelativeToolTip": "TyperV1API\\Models\\UserKeyStatDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T20:32:23.405Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserStatDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Models\\UserStatDTO.cs",
-              "RelativeDocumentMoniker": "TyperV1API\\Models\\UserStatDTO.cs",
-              "ToolTip": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Models\\UserStatDTO.cs",
-              "RelativeToolTip": "TyperV1API\\Models\\UserStatDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T20:31:52.006Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UserStat.cs",
-              "DocumentMoniker": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Models\\UserStat.cs",
-              "RelativeDocumentMoniker": "TyperV1API\\Models\\UserStat.cs",
-              "ToolTip": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Models\\UserStat.cs",
-              "RelativeToolTip": "TyperV1API\\Models\\UserStat.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAlAAAAAAAAAA==",
+              "Title": "UserBigraphStat.cs",
+              "DocumentMoniker": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Models\\UserBigraphStat.cs",
+              "RelativeDocumentMoniker": "TyperV1API\\Models\\UserBigraphStat.cs",
+              "ToolTip": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Models\\UserBigraphStat.cs",
+              "RelativeToolTip": "TyperV1API\\Models\\UserBigraphStat.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T20:30:12.494Z"
+              "WhenOpened": "2024-09-18T18:51:47.533Z"
             }
           ]
         }
