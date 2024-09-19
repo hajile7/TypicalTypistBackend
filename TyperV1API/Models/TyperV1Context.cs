@@ -89,7 +89,7 @@ public partial class TyperV1Context : DbContext
 
             entity.HasOne(d => d.User).WithMany(p => p.UserBigraphStats)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__UserBigra__UserI__75F77EB0");
+                .HasConstraintName("FK__UserBigra__UserI__1A34DF26");
         });
 
         modelBuilder.Entity<UserKeyStat>(entity =>

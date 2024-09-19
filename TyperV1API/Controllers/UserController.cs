@@ -23,6 +23,7 @@ namespace TyperV1API.Controllers
             return new UserDTO
             {
                 UserId = u.UserId,
+                Joined = u.Joined,
                 FirstName = u.FirstName,
                 LastName = u.LastName,
                 UserName = u.UserName,
@@ -95,6 +96,7 @@ namespace TyperV1API.Controllers
 
             User newUser = new User();
 
+            newUser.Joined = u.Joined;
             newUser.UserName = u.UserName;
             newUser.Password = passwordService.HashPassword(u.Password);
             newUser.FirstName = u.FirstName;

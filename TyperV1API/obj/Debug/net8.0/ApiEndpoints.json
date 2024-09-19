@@ -13,6 +13,11 @@
         "IsRequired": false
       },
       {
+        "Name": "Joined",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
         "Name": "LastName",
         "Type": "System.String",
         "IsRequired": false
