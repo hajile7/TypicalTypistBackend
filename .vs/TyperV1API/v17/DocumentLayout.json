@@ -38,8 +38,7 @@
               "RelativeToolTip": "TyperV1API\\Models\\WordTestObject.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T16:16:07.425Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T16:16:07.425Z"
             },
             {
               "$type": "Document",
@@ -49,7 +48,7 @@
               "RelativeDocumentMoniker": "TyperV1API\\Controllers\\WordsController.cs",
               "ToolTip": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\Controllers\\WordsController.cs",
               "RelativeToolTip": "TyperV1API\\Controllers\\WordsController.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAqwF0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAiwHoAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-17T16:13:03.66Z",
               "EditorCaption": ""
@@ -64,8 +63,7 @@
               "RelativeToolTip": "TyperV1API\\Models\\Word.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T16:15:15.871Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T16:15:15.871Z"
             }
           ]
         }
