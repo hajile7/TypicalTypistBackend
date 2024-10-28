@@ -17,19 +17,19 @@ namespace TyperV1API.Controllers
         static List<WordTestObject> convertToWordTestObjects(List<string> strs)
         {
             List<WordTestObject> wordTestObjects = new List<WordTestObject>();
-            List<string> currentWordChars = new List<string>();
+            List<char> currentWordChars = new List<char>();
             int startIndex = 0;
 
             for(int i = 0; i < strs.Count; i++)
             {
-                string s = strs[i];
+                char s = char.Parse(strs[i]);
 
-                if(s == "1")
+                if(s == '1')
                 {
                     if(currentWordChars.Count > 0)
                     {
                         wordTestObjects.Add(new WordTestObject{ chars = currentWordChars, startIndex = startIndex});
-                        currentWordChars = new List<string>();
+                        currentWordChars = new List<char>();
                     }
                     startIndex = i + 1;
                 }

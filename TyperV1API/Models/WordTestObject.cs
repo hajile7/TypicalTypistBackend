@@ -2,7 +2,7 @@
 {
     public class WordTestObject
     {
-        public List<string> chars { get; set; } = new List<string>();
+        public List<char> chars { get; set; } = new List<char>();
         public int startIndex { get; set; } = 0;
     }
 }
