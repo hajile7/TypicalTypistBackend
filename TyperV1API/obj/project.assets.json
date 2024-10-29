@@ -4572,11 +4572,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\TyperV1API.csproj",
+      "projectUniqueName": "C:\\Users\\Eli\\source\\repos\\My stuff\\TypicalTypist\\TypicalTypistBackend\\TyperV1API\\TyperV1API.csproj",
       "projectName": "TyperV1API",
-      "projectPath": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\TyperV1API.csproj",
+      "projectPath": "C:\\Users\\Eli\\source\\repos\\My stuff\\TypicalTypist\\TypicalTypistBackend\\TyperV1API\\TyperV1API.csproj",
       "packagesPath": "C:\\Users\\Eli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\obj\\",
+      "outputPath": "C:\\Users\\Eli\\source\\repos\\My stuff\\TypicalTypist\\TypicalTypistBackend\\TyperV1API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Eli\\AppData\\Roaming\\NuGet\\NuGet.Config",

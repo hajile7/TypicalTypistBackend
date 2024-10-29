@@ -12,8 +12,7 @@ namespace TyperV1API.Controllers
     {
         private TyperV1Context dbContext = new TyperV1Context();
 
-        //Helper functions
-
+        // Helper functions
         static List<WordTestObject> convertToWordTestObjects(List<string> strs)
         {
             List<WordTestObject> wordTestObjects = new List<WordTestObject>();
@@ -49,7 +48,7 @@ namespace TyperV1API.Controllers
             return wordTestObjects;
         } 
 
-        //HTTP calls
+        // HTTP calls
         [HttpGet("Random")]
         public async Task<IActionResult> getRandomWords()
         {
@@ -91,43 +90,6 @@ namespace TyperV1API.Controllers
             return Ok(convertToWordTestObjects(selectedWords));
 
         }
-
-        //[HttpGet("Random")]
-        //public async Task<IActionResult> getRandomWords()
-        //{
-        //    int minChars = 142;
-        //    int maxChars = 144;
-        //    int totalCharCount = 0;
-
-        //    Random random = new Random();
-
-        //    List<string> selectedWords = new List<string>();
-
-        //    List<Word> words = await dbContext.Words.ToListAsync();
-
-        //    List<Word> randomWords = words.OrderBy(w => random.Next()).ToList();
-
-        //    foreach (Word word in randomWords)
-        //    {
-        //        totalCharCount += word.Length;
-        //        if (totalCharCount > maxChars)
-        //        {
-
-        //            break;
-        //        }
-
-        //        selectedWords.Add(word.Word1);
-
-        //        if (totalCharCount >= minChars && totalCharCount <= maxChars)
-        //        {
-        //            break;
-        //        }
-        //    }
-
-        //    return Ok(selectedWords);
-
-        //}
-
 
     }
 }

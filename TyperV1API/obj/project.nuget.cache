@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F1okMQ48O2g=",
+  "dgSpecHash": "wDvHNSJyPdU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Eli\\source\\repos\\My stuff\\typerV1\\TyperV1Backend\\TyperV1API\\TyperV1API\\TyperV1API.csproj",
+  "projectFilePath": "C:\\Users\\Eli\\source\\repos\\My stuff\\TypicalTypist\\TypicalTypistBackend\\TyperV1API\\TyperV1API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Eli\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Eli\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
