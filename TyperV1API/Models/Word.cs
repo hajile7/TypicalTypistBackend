@@ -9,8 +9,6 @@ public partial class Word
 
     public string Word1 { get; set; } = null!;
 
-    public int Length { get; set; }
-
     public string? StartsWith { get; set; }
 
     public virtual ICollection<Bigraph> Bigraphs { get; set; } = new List<Bigraph>();

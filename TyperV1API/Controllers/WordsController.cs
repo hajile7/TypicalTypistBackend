@@ -55,30 +55,25 @@ namespace TyperV1API.Controllers
             int minChars = 142;
             int maxChars = 144;
             int totalCharCount = 0;
+            List<string> selectedWords = [];
+            List<string> randomWords = await dbContext.Words
+                .OrderBy(w => EF.Functions.Random())
+                .Select(w => w.Word1)
+                .Take(200)
+                .ToListAsync();
 
-            Random random = new Random();
-
-            List<string> selectedWords = new List<string>();
-
-            List<Word> words = await dbContext.Words.ToListAsync();
-
-            List<Word> randomWords = words.OrderBy(w => random.Next()).ToList();
-
-            foreach(Word word in randomWords)
+            foreach(string word in randomWords)
             {
                 //Add 1 to denote spaces
-                string workingWord = word.Word1 + "1";
+                string workingWord = word + "1";
                 totalCharCount += workingWord.Length;
+
                 if (totalCharCount > maxChars)
                 {
                     break;
                 }
 
-                //Add characters of word + its corresponding space to selectedWords
-                for (int i = 0; i < workingWord.Length; i++) 
-                {
-                    selectedWords.Add(workingWord[i].ToString());
-                }
+                selectedWords.AddRange(workingWord.Select(c => c.ToString()));
                 
                 if(totalCharCount >= minChars && totalCharCount <= maxChars)
                 {
