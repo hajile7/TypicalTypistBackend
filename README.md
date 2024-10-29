@@ -1,2 +1,0 @@
-If you'd like to use TyperV1 on your local environment, first create the database on your machine with the included SQL file. Once created, open the two included programs (MockPopulateBigraphData && MockPopulateSpaceBigraphs). Add your connection string to the two
-programs and run them to populate your bigraphs table. The order in which you run these does not matter. Once you've run these, your database will be ready to go and you should be able to use TyperV1 on your local environment!
