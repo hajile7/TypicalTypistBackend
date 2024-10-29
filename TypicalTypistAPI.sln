@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TyperV1API", "TyperV1API\TyperV1API.csproj", "{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TypicalTypistAPI", "TyperV1API\TypicalTypistAPI.csproj", "{219FBD73-BC7D-4761-8B87-A1E5B56D2ED5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
