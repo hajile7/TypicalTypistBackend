@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TyperV1API.Models;
+namespace TypicalTypistAPI.Models;
 
 public partial class UserTypingTest
 {
@@ -9,7 +9,7 @@ public partial class UserTypingTest
 
     public int UserId { get; set; }
 
-    public DateTime? TestDate { get; set; }
+    public DateTime TestDate { get; set; }
 
     public int? CharCount { get; set; }
 

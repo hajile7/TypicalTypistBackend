@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using TyperV1API.Classes;
-using TyperV1API.Models;
+using TypicalTypistAPI.Classes;
+using TypicalTypistAPI.Models;
 
 namespace TyperV1API.Controllers
 {

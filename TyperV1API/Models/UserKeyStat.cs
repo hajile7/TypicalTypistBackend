@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TyperV1API.Models;
+namespace TypicalTypistAPI.Models;
 
 public partial class UserKeyStat
 {
-    public int KeyStatId { get; set; }
+    public long KeyStatId { get; set; }
 
-    public int? UserId { get; set; }
+    public int UserId { get; set; }
 
     public string Key { get; set; } = null!;
 
@@ -17,5 +17,5 @@ public partial class UserKeyStat
 
     public decimal? Speed { get; set; }
 
-    public virtual User? User { get; set; }
+    public virtual User User { get; set; } = null!;
 }

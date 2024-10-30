@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TyperV1API.Models;
+namespace TypicalTypistAPI.Models;
 
 public partial class User
 {

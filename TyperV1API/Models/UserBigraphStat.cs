@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TyperV1API.Models;
+namespace TypicalTypistAPI.Models;
 
 public partial class UserBigraphStat
 {
-    public int BigraphStatId { get; set; }
+    public long BigraphStatId { get; set; }
 
     public int? UserId { get; set; }
 

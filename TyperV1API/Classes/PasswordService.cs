@@ -1,4 +1,4 @@
-﻿namespace TyperV1API.Classes
+﻿namespace TypicalTypistAPI.Classes
 {
     public class PasswordService
     {

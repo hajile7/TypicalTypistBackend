@@ -1,10 +1,10 @@
-﻿using TyperV1API.Models;
+﻿using TypicalTypistAPI.Models;
 
-namespace TyperV1API.Classes
+namespace TypicalTypistAPI.Classes
 {
     public class Uploader
     {
-        private TyperV1Context dbContext = new TyperV1Context();
+        private TypicalTypistDbContext dbContext = new TypicalTypistDbContext();
 
         public Image getImage(IFormFile file, string folderName)
         {
